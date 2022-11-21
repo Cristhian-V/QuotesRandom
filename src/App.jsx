@@ -4,6 +4,11 @@ import quotes from './json/DB.json'
 import { useState } from 'react'
 
 function App() {
+
+  quotes.forEach(element => {
+    console.log(element.author)
+  });
+  
   const getRandomFromArray = arr => {
     const indexRamdom = Math.floor(Math.random() * arr.length)
     return arr[indexRamdom]
