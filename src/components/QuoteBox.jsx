@@ -1,10 +1,7 @@
 import React from 'react'
+import ButtonCard from './ButtonCard'
 
 const QuoteBox = ({ quoteRamdom, handleClick, color }) => {
-
-    const objStyle = {
-        backgroundColor: color
-    }
 
 
     return (
@@ -12,7 +9,10 @@ const QuoteBox = ({ quoteRamdom, handleClick, color }) => {
             <i className="fa-solid fa-quote-left card-icon"></i>
             <p className='card-quote'> {quoteRamdom.quote} </p>
             <h1 className='card-author'> {quoteRamdom.author} </h1>
-            <button onClick={handleClick} className='card-btn' style={objStyle}> &gt; </button>
+            <ButtonCard 
+            handleClick={handleClick}
+            color={color}
+            />
         </article>
     )
 }
